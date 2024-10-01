@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'pip3 install -r requirements.txt'
+                echo 'Install dependencies from requirements.txt'
             }
         }
         stage('Run Tests') {
