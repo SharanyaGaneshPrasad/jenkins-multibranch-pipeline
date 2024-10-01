@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'pip3 install -r requirements.txt'
+                echo 'Install dependencies from requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'python -m unittest discover'
+                sh 'python3 -m unittest discover'
             }
         }
         stage('Lint Code') {
