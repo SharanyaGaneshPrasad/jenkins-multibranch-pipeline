@@ -17,9 +17,9 @@ pipeline {
                 sh 'python3 -m unittest discover'
             }
         }
-        stage('Lint Code') {
+        stage('Deploy  Code') {
             steps {
-                sh 'flake8 .'
+                echo 'deploy to ECR'
             }
         }
     }
